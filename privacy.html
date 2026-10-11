@@ -1,0 +1,226 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Privacy Policy – Creator Upload</title>
+  <meta name="description" content="How the Creator Upload Android app uses, stores and shares data.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <img src="assets/icon-192.png" alt="">
+    <a class="name" href="index.html">Creator Upload</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="privacy.html" aria-current="page">Privacy Policy</a>
+      <a href="terms.html">Terms of Use</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+  <div class="wrap">
+    <h1>Privacy Policy</h1>
+    <p class="lead">Effective date: 11 October 2026</p>
+
+    <p>This policy explains how the Android app <strong>Creator Upload</strong>
+      ("the app") uses information. The app is developed by
+      Atta Rao &amp; M. Badar Rao ("the developers"). Contact:
+      <a href="mailto:raobadar61@gmail.com">raobadar61@gmail.com</a>.</p>
+
+    <div class="note">
+      <p><strong>In short:</strong> the app uploads the videos you choose to
+        your own YouTube channel. Video analysis happens on your phone. The
+        developers run no server and receive none of your videos, account
+        details or upload history. Data goes only to Google: to YouTube for
+        uploads, to Google sign-in, and limited diagnostic data from Google's
+        ML Kit library (described below).</p>
+    </div>
+
+    <h2>1. YouTube API Services</h2>
+    <p>Creator Upload uses <strong>YouTube API Services</strong> to upload
+      videos and thumbnails to your channel. By using the app you agree to be
+      bound by the <a href="https://www.youtube.com/t/terms">YouTube Terms of
+      Service</a>. Google's handling of data is described in the
+      <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.</p>
+
+    <h2>2. Information the app accesses and why</h2>
+
+    <h3>2.1 Your Google account</h3>
+    <p>When you tap "Connect Google account", Google's sign-in on your phone
+      gives the app your Google account's basic profile (email address and
+      name). The app shows the email address so you can see which account
+      uploads go to. It is kept in the app's memory and is not written to the
+      app's storage or sent to the developers.</p>
+    <p>The app then asks Google for one permission,
+      <code>https://www.googleapis.com/auth/youtube.upload</code>. Google
+      returns a temporary access token that the app uses only to send your
+      uploads to YouTube. Tokens are managed by Google Play services; the app
+      requests them when needed, keeps them only in memory, sends them only to
+      Google's YouTube API, and never logs or stores them.</p>
+
+    <h3>2.2 Videos you choose</h3>
+    <p>Videos are selected with Android's system picker. The app reads only
+      the videos you pick. If Android provides a temporary copy, the app keeps
+      that copy in its private storage while the upload waits in the queue and
+      deletes it after the upload finishes or is cancelled. Your original
+      video in the gallery is never changed or deleted. The app reads the
+      video's file name, size, length and resolution.</p>
+
+    <h3>2.3 On-device video analysis</h3>
+    <p>To suggest a title, description, tags and thumbnail, the app extracts a
+      few still frames (8 to 12) from the video and analyses them <strong>on
+      your phone</strong> with Google's ML Kit (image labelling, text
+      recognition and object detection) and the phone's own image functions
+      (sharpness, colour, scene changes). The frames are temporary files in
+      the app's private cache and are deleted after analysis, or when you
+      upload or pick another video. The analysis results (for example
+      "Car", text read on a badge, a colour) are used only to build the
+      suggestions. Text read from your video is uploaded only if it becomes
+      part of a title, description or tags that you upload.</p>
+
+    <h3>2.4 Thumbnails</h3>
+    <p>If you use a custom thumbnail, the app creates it on your phone from a
+      frame of your video. It is uploaded to YouTube for that video. A small
+      preview is kept in the app's upload history. If setting the thumbnail
+      fails, the full image is kept for up to 7 days so you can retry, then
+      deleted.</p>
+
+    <h3>2.5 Information stored on your phone</h3>
+    <table>
+      <tr><th scope="col">What</th><th scope="col">Why</th><th scope="col">How long</th></tr>
+      <tr><td>Upload queue and history: file name, title, description, tags,
+        visibility, made-for-kids choice, YouTube video ID/link, status,
+        dates, error messages, thumbnail preview</td>
+        <td>Show progress and history, resume and retry uploads</td>
+        <td>Until you remove it, clear history, or uninstall the app</td></tr>
+      <tr><td>Temporary upload session address from YouTube</td>
+        <td>Resume an interrupted upload without creating a duplicate</td>
+        <td>Removed when the upload finishes or is cancelled</td></tr>
+      <tr><td>Settings and publishing presets (visibility default,
+        made-for-kids answer, styles, hashtags, description text)</td>
+        <td>Remember your choices</td>
+        <td>Until you change them or uninstall the app</td></tr>
+      <tr><td>Daily counts of analysed and uploaded videos</td>
+        <td>Shown on the main screen for your information</td>
+        <td>Until you uninstall the app</td></tr>
+      <tr><td>A yes/no flag that unfinished uploads exist</td>
+        <td>Remind you after the phone restarts</td>
+        <td>Updated as uploads finish</td></tr>
+    </table>
+    <p>This information stays in the app's private storage on your phone. It
+      is not sent to the developers, and the app has no cloud backup of its own.</p>
+
+    <h2>3. What is sent, and to whom</h2>
+    <table>
+      <tr><th scope="col">Recipient</th><th scope="col">What</th><th scope="col">When</th></tr>
+      <tr><td>YouTube (Google), via the YouTube Data API</td>
+        <td>The video file, title, description, tags, visibility,
+          made-for-kids choice, category ("People &amp; Blogs") and, if used,
+          the thumbnail image</td>
+        <td>When you upload</td></tr>
+      <tr><td>Google sign-in (Google Play services on your phone)</td>
+        <td>Sign-in and permission requests for your Google account</td>
+        <td>When you connect your account and when an upload needs a token</td></tr>
+      <tr><td>Google ML Kit</td>
+        <td>According to Google's
+          <a href="https://developers.google.com/ml-kit/android-data-disclosure">ML Kit data disclosure</a>:
+          device information, app package name and version, identifiers,
+          performance metrics, API configuration, input/output sizes, event
+          types and error codes, for diagnostics and usage analytics, sent
+          over HTTPS and not transferred to third parties. ML Kit's object
+          detection also uses Firebase Installations and Firebase Remote
+          Config. This list does not include your video or frames.</td>
+        <td>When the video-analysis features are used</td></tr>
+    </table>
+    <p>The developers do not operate any server, analytics, advertising or
+      tracking service for the app and do not receive the data above.
+      Links to your uploaded videos open in your browser or the YouTube app.</p>
+
+    <h2>4. How information is used</h2>
+    <p>Information is used only to provide the app's features: signing in,
+      analysing videos on your phone, preparing metadata and thumbnails,
+      uploading to YouTube, and showing your queue and history. It is not
+      sold, not used for advertising, and not shared with anyone other than
+      Google as described in section 3.</p>
+    <p class="note">Creator Upload's use and transfer to any other app of
+      information received from Google APIs will adhere to the
+      <a href="https://developers.google.com/terms/api-services-user-data-policy">Google API Services User Data Policy</a>,
+      including the Limited Use requirements.</p>
+
+    <h2>5. Android permissions</h2>
+    <table>
+      <tr><th scope="col">Permission</th><th scope="col">Purpose</th></tr>
+      <tr><td>Internet, network state</td><td>Upload to YouTube; wait for a
+        connection or Wi-Fi (if you choose Wi-Fi-only uploads)</td></tr>
+      <tr><td>Foreground service (data sync), wake lock</td><td>Keep an upload
+        running in the background with the screen off, with a visible
+        notification</td></tr>
+      <tr><td>Notifications</td><td>Show upload progress and results (you can
+        refuse; uploads still work)</td></tr>
+      <tr><td>Run at startup</td><td>Only to remind you about unfinished
+        uploads after the phone restarts</td></tr>
+      <tr><td>Biometric / fingerprint, and Google Play services messaging
+        (<code>c2dm.permission.RECEIVE</code>)</td><td>Added automatically by
+        Google's sign-in and Play services libraries. Creator Upload does not
+        itself use biometrics or send push messages.</td></tr>
+    </table>
+    <p>The app does not request access to your contacts, location, camera,
+      microphone or all of your files. Videos are read only through the
+      system picker.</p>
+
+    <h2>6. Cookies</h2>
+    <p>The app does not use cookies or similar tracking. This website does not
+      use cookies, analytics or third-party scripts.</p>
+
+    <h2>7. Your choices and deleting data</h2>
+    <ul>
+      <li><strong>Remove upload history:</strong> in the app, open History and
+        remove an item or use "Clear history". This does not delete videos
+        from YouTube.</li>
+      <li><strong>Disconnect:</strong> in the app, Settings &gt; "Disconnect
+        and remove access" signs out and revokes the app's permission.</li>
+      <li><strong>Revoke access at any time</strong> on the Google security
+        settings page:
+        <a href="https://security.google.com/settings/security/permissions">security.google.com/settings/security/permissions</a>.</li>
+      <li><strong>Delete everything on the phone:</strong> uninstall the app,
+        or use Android Settings &gt; Apps &gt; Creator Upload &gt; Storage &gt;
+        Clear data.</li>
+      <li><strong>Videos on YouTube</strong> are managed in YouTube Studio and
+        follow YouTube's own policies.</li>
+    </ul>
+
+    <h2>8. Security</h2>
+    <p>Data sent to Google uses encrypted HTTPS connections. Information kept
+      by the app is stored in its private storage, which other apps cannot
+      read. The app contains no passwords or secret keys.</p>
+
+    <h2>9. Children</h2>
+    <p>Creator Upload is a tool for people who manage a YouTube channel and
+      requires a Google account; it is not directed at children. The
+      "made for kids" choice in the app is YouTube's audience setting for a
+      video, not information about the user.</p>
+
+    <h2>10. Changes to this policy</h2>
+    <p>If the app's data use changes, this page will be updated and the
+      effective date above changed.</p>
+
+    <h2>11. Contact</h2>
+    <p>Questions or complaints about privacy:
+      <a href="mailto:raobadar61@gmail.com">raobadar61@gmail.com</a>.</p>
+  </div>
+</main>
+<footer>
+  <div class="wrap">
+    <p>Creator Upload uses YouTube API Services. By using it you agree to the
+      <a href="https://www.youtube.com/t/terms">YouTube Terms of Service</a>.
+      See also the <a href="https://policies.google.com/privacy">Google Privacy Policy</a>.
+      Creator Upload is not made by, endorsed by or affiliated with YouTube or Google.</p>
+    <p><a href="index.html">Home</a> · <a href="terms.html">Terms of Use</a></p>
+  </div>
+</footer>
+</body>
+</html>
