@@ -24,7 +24,7 @@
 <main id="main">
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p class="lead">Effective date: 11 October 2026</p>
+    <p class="lead">Effective date: 12 October 2026</p>
 
     <p>This policy explains how the Android app <strong>Creator Upload</strong>
       ("the app") uses information. The app is developed by
@@ -61,6 +61,23 @@
       uploads to YouTube. Tokens are managed by Google Play services; the app
       requests them when needed, keeps them only in memory, sends them only to
       Google's YouTube API, and never logs or stores them.</p>
+    <p>Two optional tools ask for extra permissions, only when you open them
+      and tap "Allow access":</p>
+    <ul>
+      <li><strong>Bulk metadata &amp; playlists</strong> asks for
+        <code>https://www.googleapis.com/auth/youtube.force-ssl</code> to read
+        your list of videos and playlists and, after you preview and confirm,
+        change the titles, descriptions and tags you edited or add videos to
+        a playlist. The app never deletes videos with it.</li>
+      <li><strong>Channel dashboard</strong> asks for
+        <code>https://www.googleapis.com/auth/youtube.readonly</code> and
+        <code>https://www.googleapis.com/auth/yt-analytics.readonly</code> to
+        show your channel's totals and YouTube Analytics numbers (views, watch
+        time, subscribers, likes). It cannot change anything.</li>
+    </ul>
+    <p>Data read with these permissions is shown on screen and kept only in the
+      app's memory while the screen is open. It is not stored or sent to the
+      developers.</p>
 
     <h3>2.2 Videos you choose</h3>
     <p>Videos are selected with Android's system picker. The app reads only
@@ -89,7 +106,35 @@
       fails, the full image is kept for up to 7 days so you can retry, then
       deleted.</p>
 
-    <h3>2.5 Information stored on your phone</h3>
+    <h3>2.5 Tools that work on your phone</h3>
+    <p>The Toolbox's video diagnostics, thumbnail check, compressor/converter,
+      subtitle studio, publishing calendar and storage &amp; duplicates tools
+      run on your phone and send nothing to the internet. The compressor
+      writes a new file to Movies/Creator Upload and never changes the
+      original. The storage tool reads only a folder you choose in Android's
+      folder picker, for as long as the app is open; it reads file names,
+      sizes, dates and file contents (to compare them) and deletes only files
+      you select and confirm. Reminders are local notifications.</p>
+
+    <h3>2.6 Optional cloud AI: Google Gemini</h3>
+    <p>Some optional features use Google's Gemini AI <strong>in the cloud,
+      not on your phone</strong>: the Gemini assistant, "Ask Gemini" in the
+      thumbnail check, and Gemini visual recognition. They are off until you
+      allow them, and before every request the app shows exactly what will be
+      sent and asks you to confirm. What is sent: a few small still pictures
+      taken from the video you chose (or the thumbnail image you chose), the
+      times of those pictures and the video length, and any instructions you
+      type. The video file, its sound, its file name and your account details
+      are not sent. Requests go through Google's Firebase AI Logic service to
+      the Gemini Developer API (free tier); on the free tier Google may use
+      submitted content to improve its products
+      (<a href="https://ai.google.dev/gemini-api/terms">Gemini API terms</a>).
+      Firebase App Check sends a device attestation token with each request.
+      Gemini's answers are kept only in the app's memory while it is open.
+      If you use the "own key" test option, the key you type is stored in
+      Android's encrypted storage on your phone and sent only to Google.</p>
+
+    <h3>2.7 Information stored on your phone</h3>
     <table>
       <tr><th scope="col">What</th><th scope="col">Why</th><th scope="col">How long</th></tr>
       <tr><td>Upload queue and history: file name, title, description, tags,
@@ -107,6 +152,13 @@
       <tr><td>Daily counts of analysed and uploaded videos</td>
         <td>Shown on the main screen for your information</td>
         <td>Until you uninstall the app</td></tr>
+      <tr><td>Publishing calendar plans (title, platform, date, notes, status,
+        reminder time) and the subtitle draft you are editing</td>
+        <td>Keep your plans and unsaved subtitles</td>
+        <td>Until you delete them or uninstall the app</td></tr>
+      <tr><td>An estimate of today's YouTube quota used by the bulk tools</td>
+        <td>Avoid using up the quota uploads need</td>
+        <td>Replaced each day</td></tr>
       <tr><td>A yes/no flag that unfinished uploads exist</td>
         <td>Remind you after the phone restarts</td>
         <td>Updated as uploads finish</td></tr>
@@ -122,6 +174,17 @@
           made-for-kids choice, category ("People &amp; Blogs") and, if used,
           the thumbnail image</td>
         <td>When you upload</td></tr>
+      <tr><td>YouTube (Google), via the YouTube Data API</td>
+        <td>Requests for your video and playlist lists; the new title,
+          description and tags, or playlist additions, that you confirmed</td>
+        <td>Only when you use Bulk metadata &amp; playlists</td></tr>
+      <tr><td>Google (Firebase AI Logic and Gemini Developer API)</td>
+        <td>The small pictures, picture times, video length and instructions
+          listed in section 2.6, plus a Firebase App Check token</td>
+        <td>Only when you use a Gemini feature and confirm</td></tr>
+      <tr><td>YouTube (Google), via the YouTube Analytics API</td>
+        <td>Requests for your channel's reports for the chosen date range</td>
+        <td>Only when you open the Channel dashboard</td></tr>
       <tr><td>Google sign-in (Google Play services on your phone)</td>
         <td>Sign-in and permission requests for your Google account</td>
         <td>When you connect your account and when an upload needs a token</td></tr>
